@@ -17,13 +17,9 @@ RUN comfy model download --url https://dl.fbaipublicfiles.com/segment_anything/s
 RUN comfy model download --url https://huggingface.co/Bingsu/adetailer/resolve/main/models/bbox/Eyeful_v1.pt --relative-path models/adetailer --filename bbox/Eyeful_v1.pt
 
 # Create LoRA directory structure
-RUN mkdir -p /comfyui/models/loras/xl
+# RUN mkdir -p /comfyui/models/loras/xl
 
 # Copy local LoRA files (build context should be from parent directory: tutorial_2/)
 # Build command: docker build -f comfy_serverless_juggernaut_xl/dockerfile -t comfyui-juggernaut-xl .
-COPY add-detail-xl.safetensors /comfyui/models/loras/xl/add-detail-xl.safetensors
-COPY aesthetic_anime_v1s.safetensors /comfyui/models/loras/xl/aesthetic_anime_v1s_xl.safetensors
-
-# Copy local static input files into the ComfyUI input directory (delete if not needed)
-# Assumes you have an 'input' folder next to your Dockerfile
-COPY input/ /comfyui/input/
+# COPY add-detail-xl.safetensors /comfyui/models/loras/xl/add-detail-xl.safetensors
+# COPY aesthetic_anime_v1s.safetensors /comfyui/models/loras/xl/aesthetic_anime_v1s_xl.safetensors

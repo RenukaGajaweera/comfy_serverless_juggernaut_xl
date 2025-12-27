@@ -986,7 +986,7 @@
             "widgets_values": [
                 "simple",
                 3,
-                "xl\\add-detail-xl.safetensors",
+                "None",
                 1,
                 1,
                 1,
@@ -994,7 +994,7 @@
                 0.9,
                 1,
                 1,
-                "xl\\aesthetic_anime_v1s_xl.safetensors",
+                "None",
                 0.8,
                 1,
                 1,
